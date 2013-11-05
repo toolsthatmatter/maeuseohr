@@ -12,6 +12,6 @@ Router.map ->
     path: '/family/:_id'
 
 
+Deps.autorun ->
+  Meteor.subscribe "groups"        
 
-Template.kita.groups = ->
-  Groups.find({})
