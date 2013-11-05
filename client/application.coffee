@@ -1,6 +1,12 @@
-Template.hello.greeting = ->
-  "Welcome to maeuseohr."
+Router.configure
+  autoRender: false
 
-Template.hello.events "click input": ->
-  # template data, if any, is available in 'this'
-  console.log "You pressed the button"  if typeof console isnt "undefined"
+Router.map ->
+  this.route 'kita',
+    path: '/'
+
+  this.route 'group',
+    path: '/group/:_id'
+
+  this.route 'family',
+    path: '/family/:_id'
