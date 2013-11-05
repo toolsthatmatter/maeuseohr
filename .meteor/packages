@@ -10,3 +10,4 @@ coffeescript
 foundation
 accounts-password
 accounts-ui
+iron-router
