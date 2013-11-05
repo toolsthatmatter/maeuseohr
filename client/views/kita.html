@@ -1,3 +1,10 @@
 <template name="kita">
-  <h2>KiTa!</h2>
+
+{{#each Groups}}
+  <div id="group_1" class="panel">
+    <h2>{{name}}</h2>
+    <span>{{description}}</span>
+  </div>
+{{/each}}
+
 </template>
