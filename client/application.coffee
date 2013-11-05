@@ -10,3 +10,8 @@ Router.map ->
 
   this.route 'family',
     path: '/family/:_id'
+
+
+
+Template.kita.groups = ->
+  Groups.find({})
