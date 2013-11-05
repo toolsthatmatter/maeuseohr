@@ -5,6 +5,7 @@
 
 standard-app-packages
 autopublish
-insecure
 preserve-inputs
 coffeescript
+accounts-password
+accounts-ui
