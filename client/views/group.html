@@ -3,6 +3,19 @@
   <h1>{{name}}</h1>
   <img src="http://lorempixel.com/120/120/animals/{{_id}}" />
   <p>{{description}}</p>
+
+<h2>Die Kinder</h2>
+{{#each kids}}
+  <div id="group_1" class="panel">
+    <h2>{{name}}</h2>
+    <img src="http://lorempixel.com/120/120/people/{{_id}}" />
+  </div>
+{{/each}}
+
+
+<input id="name" type="text">
+<button id="event-addNew">Add new</button>
+
 {{/with}}
 
 <p>
