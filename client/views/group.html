@@ -1,5 +1,11 @@
 <template name="group">
 {{#with currentGroup}}
   <h1>{{name}}</h1>
+  <img src="http://lorempixel.com/120/120/animals/{{_id}}" />
+  <p>{{description}}</p>
 {{/with}}
+
+<p>
+<a href="{{pathFor 'kita'}}">Gruppenübersicht</a>
+</p>
 </template>
