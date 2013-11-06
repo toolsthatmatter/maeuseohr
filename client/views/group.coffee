@@ -25,10 +25,13 @@ createPerson = ->
   $('#lastname').val("")
   Groups.update(groupId, { $addToSet: { peopleIds: personId } })
 
-Template.group.events
+Template.create_person.events
   'click #event-addNew': ->
+    console.log "Test"
     createPerson()
 
   'keypress #name': (evt) ->
     if evt.which == 13
       createPerson()
+
+
