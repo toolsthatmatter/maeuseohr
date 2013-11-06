@@ -13,11 +13,11 @@
 </div>
     <div class="row">
     <div class="large-12 columns">
-      {{#each child}}
+      {{#each kids}}
       <div class="large-3 columns">
          <div class="panel">
             <div class="group-image">
-              <a href="{{pathFor 'group'}}"><img src="http://lorempixel.com/120/120/animals/{{_id}}" title="{{name}}" border="0"/></a>
+              <a href="{{pathFor 'group'}}"><img src="http://lorempixel.com/120/120/people/{{_id}}" title="{{name}}" border="0"/></a>
             </div>
             <div class="group-name">
               {{name}}
@@ -28,10 +28,10 @@
          </div>
       </div>
       {{/each}}
+        <input id="name" type="text">
+        <button id="event-addNew">Add new</button>
     </div>
   </div>
-
-
       <p>
       <a href="{{pathFor 'kita'}}">Zurück zur Gruppenübersicht</a>
       </p>

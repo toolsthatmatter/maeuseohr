@@ -5,5 +5,5 @@
     true
   remove: ->
     true
-
-
+  update: ->
+    true

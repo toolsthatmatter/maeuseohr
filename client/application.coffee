@@ -17,4 +17,5 @@ Router.map ->
 
 Deps.autorun ->
   Meteor.subscribe "groups"        
+  Meteor.subscribe "people"        
 
