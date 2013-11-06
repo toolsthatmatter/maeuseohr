@@ -1,10 +1,11 @@
 <template name="group">
+
 {{#with currentGroup}}
-  <h1>{{name}}</h1>
+  <h3>{{name}}</h3>
   <img src="http://lorempixel.com/120/120/animals/{{_id}}" />
   <p>{{description}}</p>
 
-<h2>Die Kinder</h2>
+<h3>Die Kinder</h3>
 {{#each kids}}
   <div id="group_1" class="panel">
     <h2>{{firstname}} {{lastname}}</h2>
@@ -27,6 +28,7 @@
       <td>Nachname</td>
       <td><input id="lastname" type="text"></td>
     </tr>
+    <!--
     <tr>
       <td>Strasse</td>
       <td><input id="street" type="text"></td>
@@ -47,13 +49,17 @@
       <td>Mobile</td>
       <td><input id="mobile" type="text"></td>
     </tr>
+    -->
   </table>
   
-  <a id="event-addNew">Add new</a>
 </form>
+<div>
+  <a id="event-addNew">Person hinzufügen</a>
+</div>
 {{/with}}
 
 <p>
 <a href="{{pathFor 'kita'}}">Gruppenübersicht</a>
 </p>
+
 </template>

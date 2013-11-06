@@ -1,41 +1,39 @@
 <template name="kita">
 
 
-<div class="row">
-  <div class="large-12 columns">
-    <h1>Unsere Gruppen:</h1>
-  </div>
-</div>
-
-<div class="row">
-  <div class="large-12 columns">
-    {{#each groups}}
-    <div class="large-3 columns">
-       <div class="panel">
-          <div class="group-image">
-            <a href="#"><img src="http://lorempixel.com/120/120/animals/{{_id}}" title="Lena Meier" border="0"/>
-          </div>
-          <div class="group-name">
-            {{name}}
-          </div>
-          <div>
-            <button class="event-delete tiny button">Löschen</button>
-            <a href="{{pathFor 'group'}}">Mehr</a>
-          </div>
-       </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Unsere Gruppen:</h1>
     </div>
-    {{/each}}
   </div>
-</div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      {{#each groups}}
+      <div class="large-3 columns">
+         <div class="panel">
+            <div class="group-image">
+              <a href="{{pathFor 'group'}}"><img src="http://lorempixel.com/120/120/animals/{{_id}}" title="{{name}}" border="0"/></a>
+            </div>
+            <div class="group-name">
+              {{name}}
+            </div>
+            <div>
+              <button class="event-delete tiny button">Löschen</button>
+            </div>
+         </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
 
 <div class="row">
   <div class="large-12 columns">
     <form id="newRecord">
       <input id="name" type="text" value={{name}}>
-      <button id="event-addNew">Add new</button>
+      <button id="event-addNew">Neue Gruppe anlegen</button>
     </form>
   </div>
-</div>
 
 </template>
 
