@@ -1,11 +1,13 @@
 <template name="group">
+   <div class="row">
+    <div class="large-12 columns">
 
 {{#with currentGroup}}
   <h3>{{name}}</h3>
   <img src="http://lorempixel.com/120/120/animals/{{_id}}" />
   <p>{{description}}</p>
 
-<h3>Die Kinder</h3>
+<h3>Unsere Kinder</h3>
 {{#each kids}}
   <div id="group_1" class="panel">
     <h2>{{firstname}} {{lastname}}</h2>
