@@ -18,39 +18,9 @@
     </ul>
   </div>
 {{/each}}
-  <form id="adressForm">
-  <table>
-    <tr>
-      <td>Vorname</td>
-      <td><input id="firstname" type="text"></td>
-    </tr>
-    <tr>
-      <td>Nachname</td>
-      <td><input id="lastname" type="text"></td>
-    </tr>
-    <tr>
-      <td>Strasse</td>
-      <td><input id="street" type="text"></td>
-    </tr>
-    <tr>
-      <td>PLZ</td>
-      <td><input id="zipcode" type="text"></td>
-    </tr
-      <tr>
-      <td>Stadt</td>
-      <td><input id="city" type="text"></td>
-    </tr>
-    <tr>
-      <td>Festnetz</td>
-      <td><input id="landline" type="text"></td>
-    </tr>
-    <tr>
-      <td>Mobile</td>
-      <td><input id="mobile" type="text"></td>
-    </tr>
-  </table>
-  <button id="event-addNew">Add new</button>
-</form>
+<div>
+  <a href="{{pathFor 'create_person'}}">Neue Person hinzufügen</a>
+</div>
 {{/with}}
 
 <p>

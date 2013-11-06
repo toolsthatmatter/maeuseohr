@@ -14,8 +14,10 @@ Router.map ->
   this.route 'family',
     path: '/family/:_id'
 
+  this.route 'create_person',
+    path: '/people/new'
 
 Deps.autorun ->
-  Meteor.subscribe "groups"        
-  Meteor.subscribe "people"        
+  Meteor.subscribe "groups"
+  Meteor.subscribe "people"
 
