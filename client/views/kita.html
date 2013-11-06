@@ -1,22 +1,38 @@
 <template name="kita">
 
 
-<h1>Unsere Gruppen:</h1>
-{{#each groups}}
-  <div id="group_1" class="panel">
-    <h2>{{name}}</h2>
-    <span>{{description}}</span>
-    <img src="http://lorempixel.com/120/120/people/{{_id}}" />
-    <button class="event-delete">Löschen</button>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Unsere Gruppen:</h1>
   </div>
-{{/each}}
+</div>
 
-<p>
-Add new:
-</p>
+<div class="row">
+  <div class="large-12 columns">
+    {{#each groups}}
+    <div class="large-3 columns">
+       <div class="panel">
+          <div class="group-image">
+            <a href="#"><img src="http://lorempixel.com/120/120/people/{{_id}}" title="Lena Meier" border="0"/>
+          </div>
+          <div class="group-name">
+            {{name}}
+          </div>
+          <div>
+            <button class="event-delete tiny button">Löschen</button>
+          </div>
+       </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
 
-<input id="name" type="text">
-<button id="event-addNew">Add new</button>
+<div class="row">
+  <div class="large-12 columns">
+    <input id="name" type="text">
+    <button id="event-addNew">Add new</button>
+  </div>
+</div>
 
 </template>
 

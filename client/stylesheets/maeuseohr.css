@@ -1,1 +1,25 @@
 /* CSS declarations go here */
+
+[class*="column"]:last-child {
+  float: left !important;
+}
+
+.padded {
+  padding-left: 30px;
+}
+a {
+  color:black;
+}
+
+.group-image {
+  border: 1px solid black;
+}
+
+.group-image img {
+  width: 200px;
+  height: auto;
+}
+
+.group-name {
+  line-height:  30px;
+}
