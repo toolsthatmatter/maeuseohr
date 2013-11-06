@@ -1,11 +1,14 @@
 createKita = ->
-  $name = $('#name')
+  $form = $('#newRecord')
+  params = $form.toJSON()
   Groups.insert
-    name: $name.val()
-  $name.val("")
+    name: params.name
+  $form.reset()
         
 Template.kita.groups = ->
   Groups.find({})
+
+        
 
 Template.kita.events
   'click .event-delete': ->
