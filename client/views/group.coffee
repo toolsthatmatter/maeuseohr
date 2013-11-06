@@ -7,18 +7,22 @@ Template.group.kids = ->
   People.find({_id: {$in: ids}})
 
 createPerson = ->
-  params = $('#adressForm').toJSON()
+  #params = $('#adressForm').toJSON()
+  #console.log params
+  #return
   groupId = Session.get('currentGroupId')
 
   personId = People.insert
-    firstname: params.firstname
-    lastname: params.lastname
-    street: params.street
-    zipcode: params.zipcode
-    city: params.city
-    landline: params.landline
-    mobile: params.mobile
-
+    firstname: $('#firstname').val()
+    lastname: $('#lastname').val()
+    #firstname: params.firstname
+    #lastname: params.lastname
+    #street: params.street
+    #zipcode: params.zipcode
+    #city: params.city
+    #landline: params.landline
+    #mobile: params.mobile
+  $('#lastname').val("")
   Groups.update(groupId, { $addToSet: { peopleIds: personId } })
 
 Template.group.events
