@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "foundation": {},
-      "iron-router": {}
+      "iron-router": {},
+      "collection-api": {}
     },
     "packages": {
       "foundation": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.6.1",
         "commit": "4e1ee0581d68bff422a915dacb0bd30eae10fe08"
+      },
+      "collection-api": {
+        "git": "https://github.com/crazytoad/meteor-collectionapi.git",
+        "tag": "v0.1.15",
+        "commit": "b62c51f387287726cf3b64077f7bc69604ec2f5e"
       }
     }
   }
