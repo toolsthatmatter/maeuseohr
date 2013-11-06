@@ -12,7 +12,7 @@ Meteor.startup ( () ->
   });
 
   # Add the collection Players to the API "/players" path
-  collectionApi.addCollection(Groups, 'players', {
+  collectionApi.addCollection(Groups, 'groups', {
     # All values listed below are default
     authToken: undefined,                   # Require this string to be passed in on each request
     methods: ['POST','GET','PUT','DELETE'],  # Allow creating, reading, updating, and deleting
