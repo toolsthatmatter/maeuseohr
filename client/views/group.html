@@ -1,40 +1,60 @@
 <template name="group">
-  <div class="row">
-    <div class="large-12 columns">
-      {{#with currentGroup}}
-        <h3>{{name}}</h3>
-        <img src="http://lorempixel.com/120/120/animals/{{_id}}" title="{{name}}" border="0"/>
-        <p>{{description}}</p>
-      {{/with}}
-  <div class="row">
-      <div class="large-12 columns">
-        <h3>Unsere Kinder:</h3>
-      </div>
-</div>
-    <div class="row">
-    <div class="large-12 columns">
-      {{#each kids}}
-      <div class="large-3 columns">
-         <div class="panel">
-            <div class="group-image">
-              <a href="{{pathFor 'group'}}"><img src="http://lorempixel.com/120/120/people/{{_id}}" title="{{name}}" border="0"/></a>
-            </div>
-            <div class="group-name">
-              {{name}}
-            </div>
-            <div>
-              <button class="event-delete tiny button">Löschen</button>
-            </div>
-         </div>
-      </div>
-      {{/each}}
-        <input id="name" type="text">
-        <button id="event-addNew">Add new</button>
-    </div>
+
+{{#with currentGroup}}
+  <h3>{{name}}</h3>
+  <img src="http://lorempixel.com/120/120/animals/{{_id}}" />
+  <p>{{description}}</p>
+
+<h3>Die Kinder</h3>
+{{#each kids}}
+  <div id="group_1" class="panel">
+    <h2>{{firstname}} {{lastname}}</h2>
+    <img src="http://lorempixel.com/120/120/people/{{_id}}" />
+    <ul>
+      <li>{{street}}</li>
+      <li>{{zipcode}} {{city}}</li>
+      <li>Tel: {{landline}}</li>
+      <li>Mobile: {{mobile}}</li>
+    </ul>
   </div>
-      <p>
-      <a href="{{pathFor 'kita'}}">Zurück zur Gruppenübersicht</a>
-      </p>
-   </div>
-  </div>
+{{/each}}
+  <form id="adressForm">
+  <table>
+    <tr>
+      <td>Vorname</td>
+      <td><input id="firstname" type="text"></td>
+    </tr>
+    <tr>
+      <td>Nachname</td>
+      <td><input id="lastname" type="text"></td>
+    </tr>
+    <tr>
+      <td>Strasse</td>
+      <td><input id="street" type="text"></td>
+    </tr>
+    <tr>
+      <td>PLZ</td>
+      <td><input id="zipcode" type="text"></td>
+    </tr
+      <tr>
+      <td>Stadt</td>
+      <td><input id="city" type="text"></td>
+    </tr>
+    <tr>
+      <td>Festnetz</td>
+      <td><input id="landline" type="text"></td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td><input id="mobile" type="text"></td>
+    </tr>
+  </table>
+  <button id="event-addNew">Add new</button>
+</form>
+{{/with}}
+
+<p>
+<a href="{{pathFor 'kita'}}">Gruppenübersicht</a>
+</p>
+
 </template>
