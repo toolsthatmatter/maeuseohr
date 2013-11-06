@@ -27,7 +27,6 @@ createPerson = ->
 
 Template.create_person.events
   'click #event-addNew': ->
-    console.log "Test"
     createPerson()
 
   'keypress #name': (evt) ->
