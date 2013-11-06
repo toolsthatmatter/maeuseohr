@@ -1,2 +1,2 @@
 Template.group.currentGroup = ->
-  Groups.find({_id: currentGroupId})
+  Groups.findOne(Session.get('currentGroupId'))

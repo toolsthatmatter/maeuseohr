@@ -6,6 +6,9 @@ Router.map ->
     path: '/'
 
   this.route 'group',
+    before: ->
+      Session.set('currentGroupId', this.params._id)
+
     path: '/group/:_id'
 
   this.route 'family',
