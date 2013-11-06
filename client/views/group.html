@@ -7,15 +7,49 @@
 <h2>Die Kinder</h2>
 {{#each kids}}
   <div id="group_1" class="panel">
-    <h2>{{name}}</h2>
+    <h2>{{firstname}} {{lastname}}</h2>
     <img src="http://lorempixel.com/120/120/people/{{_id}}" />
+    <ul>
+      <li>{{street}}</li>
+      <li>{{zipcode}} {{city}}</li>
+      <li>Tel: {{landline}}</li>
+      <li>Mobile: {{mobile}}</li>
+    </ul>
   </div>
 {{/each}}
-
-
-<input id="name" type="text">
-<button id="event-addNew">Add new</button>
-
+  <form id="adressForm">
+  <table>
+    <tr>
+      <td>Vorname</td>
+      <td><input id="firstname" type="text"></td>
+    </tr>
+    <tr>
+      <td>Nachname</td>
+      <td><input id="lastname" type="text"></td>
+    </tr>
+    <tr>
+      <td>Strasse</td>
+      <td><input id="street" type="text"></td>
+    </tr>
+    <tr>
+      <td>PLZ</td>
+      <td><input id="zipcode" type="text"></td>
+    </tr
+      <tr>
+      <td>Stadt</td>
+      <td><input id="city" type="text"></td>
+    </tr>
+    <tr>
+      <td>Festnetz</td>
+      <td><input id="landline" type="text"></td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td><input id="mobile" type="text"></td>
+    </tr>
+  </table>
+  <button id="event-addNew">Add new</button>
+</form>
 {{/with}}
 
 <p>

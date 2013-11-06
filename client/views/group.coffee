@@ -2,18 +2,23 @@ Template.group.currentGroup = ->
   Groups.findOne(Session.get('currentGroupId'))
 
 Template.group.kids = ->
-  #[{name: "Karl"}, {name: "Peter"}]
   group = Groups.findOne(Session.get('currentGroupId'))
   ids = group.peopleIds || []
   People.find({_id: {$in: ids}})
 
 createPerson = ->
-  $name = $('#name')
+  params = $('#adressForm').toJSON()
   groupId = Session.get('currentGroupId')
 
   personId = People.insert
-    name: $name.val()
-  $name.val("")
+    firstname: params.firstname
+    lastname: params.lastname
+    street: params.street
+    zipcode: params.zipcode
+    city: params.city
+    landline: params.landline
+    mobile: params.mobile
+
   Groups.update(groupId, { $addToSet: { peopleIds: personId } })
 
 Template.group.events
